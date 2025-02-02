@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  font-family: "Comic Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: beige;
+  font-size: 2em;
+}
+header img {
+  width: 2em;
+  height: 2em;
+}
+#container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+#base {
+  position: absolute;
+  z-index: 1;
+  width: 500px;
+  height: 300px;
+  background-color: rgb(225, 225, 182);
+}
+#message {
+  position: absolute;
+  z-index: 2;
+  width: 400px;
+  height: 250px;
+  background-color: azure;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+#up {
+  position: absolute;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-left: 250px solid transparent;
+  border-right: 250px solid transparent;
+  border-top: 250px solid rgb(210, 210, 163);
+}
+#left {
+  position: absolute;
+  z-index: 4;
+  width: 0;
+  height: 0;
+  border-left: 300px solid rgb(233, 233, 194);
+  border-top: 300px solid transparent;
+  transform: translateX(-33%);
+}
+#right {
+  position: absolute;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  border-right: 300px solid beige;
+  border-top: 300px solid transparent;
+  transform: translateX(33%);
+}
+#base {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#container:hover #up {
+  transform: rotate(180deg);
+  transform-origin: top;
+}
+#container:hover #message {
+  transform: translateY(-20%);
+  transition: transform 0.5s linear;
+  z-index: 3;
+}
+#text {
+  font-size: 1em;
+  font-family: "Comic Neue";
+}
+@media (max-width: 599px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    font-family: "Comic Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: beige;
+    font-size: 2em;
+  }
+  header img {
+    width: 2em;
+    height: 2em;
+  }
+  #container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  #base {
+    position: absolute;
+    z-index: 1;
+    width: 500px;
+    height: 300px;
+    background-color: rgb(225, 225, 182);
+  }
+  #message {
+    position: absolute;
+    z-index: 2;
+    width: 400px;
+    height: 250px;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding: 1em;
+    border-radius: 10px;
+  }
+
+  #up {
+    position: absolute;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-top: 250px solid rgb(210, 210, 163);
+  }
+  #left {
+    position: absolute;
+    z-index: 4;
+    width: 0;
+    height: 0;
+    border-left: 300px solid rgb(233, 233, 194);
+    border-top: 300px solid transparent;
+    transform: translateX(-33%);
+  }
+  #right {
+    position: absolute;
+    z-index: 5;
+    width: 0;
+    height: 0;
+    border-right: 300px solid beige;
+    border-top: 300px solid transparent;
+    transform: translateX(33%);
+  }
+  #base {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  #container:hover #up {
+    transform: rotate(180deg);
+    transform-origin: top;
+  }
+  #container:hover #message {
+    transform: translateY(-20%);
+    transition: transform 0.5s linear;
+    z-index: 3;
+  }
+  #text {
+    font-size: 1em;
+    font-family: "Comic Neue";
+  }
+  @media (max-width: 599px) {
+    body {
+      transform: scale(0.7);
+    }
+  }
+}
